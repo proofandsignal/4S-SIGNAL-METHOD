@@ -31,3 +31,11 @@
 `DRAFT COMMITTED → JS SYNTAX PASS → RENDER DEPLOY LIVE → EXTERNAL BROWSER QA PENDING → CUSTOMER RESEARCH PREVIEW → LICENSING / AI / COMMERCIAL GATES LOCKED`
 
 No production merge, custom-domain DNS configuration, affiliate checkout, MunchEye submission, paid service or first-revenue claim in this build.
+
+## 2026-11-03 validation delta
+- In-process synthetic DOM interaction smoke tests covered six navigation tabs, five hook categories, A/B switch, custom editing, experiment plan, vault save/load and funnel copy. They passed with one false-negative from a test harness that examined a dynamically created child instead of its parent markup; follow-up inspection of the parent markup **PASS**.
+- Found and fixed an actual UX issue: updating Evidence Board previously called `generate()` and erased manually edited hooks. The action now preserves custom A/B variants. Verified in synthetic DOM after fix.
+- Fixed the Report Vault restore to recover the saved scenario and trend selection. Verified in synthetic DOM after fix.
+- Specific follow-up 4/4 simulated checks **PASS**: tab exposure, Evidence Board content, custom hook preservation after evidence update, scenario/trend restore.
+- Draft branch remains separate; no production merge. GitHub Actions workflow runs for this head: none found. Browser/Android QA still **PENDING**.
+- Last reported Render deploy was for presentation revision `fc32c05559d13fd177f666161c27c441ce41b020`; it does **not** yet contain the latest fixes until a manual redeploy is completed.
