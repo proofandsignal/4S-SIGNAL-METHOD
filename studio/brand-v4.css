@@ -66,3 +66,21 @@ body{background:radial-gradient(ellipse 46% 22% at 75% 0%,#75339250,transparent 
 @media(max-width:950px){#s4premium .s4-overview{grid-template-columns:1fr}#s4premium .s4-funnel{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:650px){#s4premium .s4-hero{padding:26px 19px}#s4premium .s4-funnel{grid-template-columns:repeat(2,minmax(0,1fr))}#s4premium .s4-study-grid{grid-template-columns:1fr}#s4premium .s4-study{padding:17px}#s4premium .s4-overview .s4-box{padding:17px}}
 @media(prefers-reduced-motion:reduce){#s4premium *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* BOOST-004 VISUAL QA REMEDIATION: remove legacy duplicate header and prioritize dashboard */
+body:has(#s4premium) .shell > .top{display:none!important}
+#s4premium .s4-hero{padding:28px 32px 25px}
+#s4premium .s4-hero h1{font-size:clamp(38px,4vw,56px);max-width:940px;margin:10px 0 14px}
+#s4premium .s4-hero h1:after{margin-top:14px}
+#s4premium .s4-hero p{font-size:14px;max-width:920px;line-height:1.55}
+#s4premium .s4-hero .s4-btn{margin-top:6px}
+#s4premium .s4-metrics{margin:12px 0}
+#s4premium .s4-metric{padding:13px}
+#s4premium .s4-overview{margin-top:10px}
+@media(max-width:650px){
+ #s4premium .s4-hero{padding:22px 18px}
+ #s4premium .s4-hero h1{font-size:36px}
+ #s4premium .s4-brandbar>small{display:none}
+ #s4premium .s4-brandbar{gap:10px}
+ #s4premium .s4-brandbar svg{width:40px;height:40px}
+}
