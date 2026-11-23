@@ -6,6 +6,7 @@ var el=function(id){return document.getElementById(id)};
 var logo='<svg viewBox="0 0 64 64" role="img" aria-label="4S Signal Studio original monogram" width="47" height="47"><defs><linearGradient id="s4lg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#efb5ff"/><stop offset="1" stop-color="#a352f3"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="15" fill="#291432" stroke="#ae50cc" stroke-width="2"/><path d="M28 12L12 37h18v14M43 16c12-5 19 4 10 11l-11 9c-10 9 8 5 13 9" stroke="url(#s4lg)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>';
 var bar=document.createElement("div");bar.id="s4v4";bar.className="s4-brandbar";bar.innerHTML=logo+'<div>4S SIGNAL STUDIO<small>CREATED BY PROOF &amp; SIGNAL</small></div><small style="margin-left:auto">PREMIUM RESEARCH DEMO · v0.4</small>';root.prepend(bar);
 var hero=root.querySelector(".s4-hero");
+if(hero){hero.querySelectorAll(".s4-tag").forEach(function(tag){if(/V0\.3/.test(tag.textContent))tag.textContent="V0.4 RESEARCH PREVIEW"})}
 if(hero){
  var h=hero.querySelector("h1");if(h){h.textContent="Turn four seconds into ";var x=document.createElement("span");x.className="s4-glow";x.textContent="a reason to Explore.";h.appendChild(x)}
  var p=hero.querySelector("p");if(p)p.textContent="Create audience-specific Word Signals and Data Signals. Compare A/B creative framing, check your evidence and build the next step in a sales funnel. No invented results or simulated conversion claims.";
