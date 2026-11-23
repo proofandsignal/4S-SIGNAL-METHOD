@@ -1,0 +1,21 @@
+import fs from "node:fs";
+import assert from "node:assert/strict";
+import vm from "node:vm";
+import path from "node:path";
+const base=path.resolve("studio");
+const read=(name)=>fs.readFileSync(path.join(base,name),"utf8");
+const html=read("index.html"),baseJs=read("premium.js"),css=read("brand-v4.css"),premium=read("premium.css"),ui=read("brand-v4.js"),study=read("study-v4.js");
+let passed=0;
+function check(label,fn){fn();console.log("PASS",label);passed++;}
+check("HTML client language and viewport",()=>{assert.match(html,/<html lang="en">/);assert.match(html,/name="viewport"/);});
+check("Premium script and style assets wired",()=>{for(const f of ["premium.css","brand-v4.css","premium.js","brand-v4.js","study-v4.js"])assert.ok(html.includes("./"+f));});
+check("JavaScript parses",()=>{for(const [name,source] of [["premium.js",baseJs],["brand-v4.js",ui],["study-v4.js",study]])new vm.Script(source,{filename:name});});
+check("Research preview uses no remote collection",()=>{for(const src of [baseJs,ui,study])assert.ok(!/\b(fetch|XMLHttpRequest|sendBeacon)\s*\(/.test(src));});
+check("No remote script dependencies",()=>assert.ok(!/<script[^>]+src=["']https?:/i.test(html)));
+check("Marketing workflow includes Word and Data Signal navigation",()=>{assert.match(ui,/Create Word Signal/);assert.match(ui,/Create Data Signal/);assert.match(ui,/dataTab/);});
+check("Original research modules preserved",()=>{for(const x of ["Hook Arena","4-Second Stage","Evidence Board","Funnel Architect","Experiment Plan","Report Vault"])assert.ok(baseJs.includes(x));});
+check("Owned mark and About Us visible in premium layer",()=>{assert.match(ui,/Original monogram/i);assert.match(ui,/About Us/);assert.match(ui,/CREATED BY PROOF/);});
+check("Preview differentiates evidence from marketing outcomes",()=>{assert.match(ui,/0 verified/);assert.match(study,/No verified audience|No verified customer|no audited experiment|No verified marketing|0 verified customer outcomes/i);});
+check("Voluntary privacy-safe study protocol",()=>{assert.match(study,/consent/);assert.match(study,/getRandomValues/);assert.match(study,/4000/);assert.match(study,/application\/json/);});
+check("Responsive premium UI",()=>{assert.match(css,/@media\(max-width:650px\)/);assert.match(premium,/@media\(max-width:700px\)/);});
+console.log("STATIC QA:",passed,"checks passed; browser/Samsung/security/legal gates remain pending.");

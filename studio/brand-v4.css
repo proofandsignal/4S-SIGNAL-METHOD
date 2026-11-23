@@ -1,0 +1,86 @@
+
+/* 4S BOOST-004 — Research preview; no customer performance claims */
+:root{--aqua:#e187ff!important;--blue:#aa80ff!important}
+html{scroll-behavior:smooth}
+body{background:radial-gradient(ellipse 46% 22% at 75% 0%,#75339250,transparent 74%),radial-gradient(ellipse 45% 30% at 5% 45%,#35205744,transparent 72%),#080810!important;color:#f5f0ff}
+#s4premium{max-width:1490px;margin:20px auto 30px;color:#f6f1ff}
+#s4premium .s4-hero{position:relative;border-color:#61416e;background:radial-gradient(circle at 92% 5%,#a929a54d,transparent 37%),radial-gradient(circle at 65% 85%,#54309b40,transparent 44%),linear-gradient(125deg,#15111e,#0d0c19 68%,#1d102e);box-shadow:0 15px 52px #ad38c32c}
+#s4premium .s4-kicker,#s4premium .s4-glow{color:#eda1ff}
+#s4premium .s4-glow{background:linear-gradient(95deg,#d084ff,#f19cdd);color:transparent;background-clip:text}
+#s4premium .s4-tag{border-color:#6d417b;color:#e8bbfc;background:#43204d70}
+#s4premium .s4-btn{border-color:#604576;background:#2c1a39;color:#f5e6ff}
+#s4premium .s4-btn.main{background:linear-gradient(110deg,#813deb,#d63bdd);color:#fff;box-shadow:0 6px 22px #9637db55}
+#s4premium .s4-metric,#s4premium .s4-panel{background:#161320;border-color:#44334e}
+#s4premium .s4-metric strong{color:#f7e8ff}
+#s4premium .s4-workspace{background:#100d18;border-color:#553c61;box-shadow:0 22px 52px #0009}
+#s4premium .s4-nav{background:#14101f;border-color:#4b3555}
+#s4premium .s4-nav button{color:#c2b1cf}
+#s4premium .s4-nav button[aria-selected=true]{color:#f7d6ff;background:#512060a3;border-color:#9755a9}
+#s4premium .s4-angle{background:#191525;border-color:#4c3659;color:#e5d8ed}
+#s4premium .s4-angle.active{background:#42214f;border-color:#c461de;color:#fff}
+#s4premium .s4-angle span,#s4premium .s4-muted,#s4premium p{color:#b9aac7}
+#s4premium .s4-input{background:#100d1b;color:#f8efff;border-color:#594567}
+#s4premium .s4-stage{border-color:#7d4b9b;background:radial-gradient(circle at 84% 9%,#87339a77,transparent 46%),linear-gradient(140deg,#2a133b,#111029 62%,#1a1236)}
+#s4premium .s4-stage .s4-stage-tag,#s4premium .s4-pill,#s4premium .s4-step strong{color:#eda6ff}
+#s4premium .s4-progress{background:#453352}
+#s4premium .s4-progress div{background:linear-gradient(90deg,#823fe9,#e64fda)}
+#s4premium .s4-quality,#s4premium .s4-step,#s4premium .s4-status{background:#20152d;border-color:#573b69}
+#s4premium button:focus-visible,#s4premium input:focus-visible,#s4premium textarea:focus-visible,#s4premium select:focus-visible{outline:2px solid #e783fa}
+#s4premium .s4-hero h1{max-width:1060px}
+#s4premium .s4-hero h1:after{content:"";display:block;width:100px;height:4px;border-radius:3px;margin-top:23px;background:linear-gradient(90deg,#af5df3,#e051d9)}
+#s4premium .s4-metrics{margin-top:18px}
+#s4premium .s4-brandbar{display:flex;align-items:center;gap:12px;margin-bottom:14px;color:#eee0fa;letter-spacing:.11em;font-weight:800;font-size:12px}
+#s4premium .s4-brandbar svg{width:47px;height:47px;filter:drop-shadow(0 0 15px #cf50ec55)}
+#s4premium .s4-brandbar small{display:block;font-size:10px;letter-spacing:.15em;color:#ae8fc0}
+#s4premium .s4-overview{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(240px,.8fr);gap:15px;margin:14px 0 20px}
+#s4premium .s4-overview .s4-box{border:1px solid #493158;background:linear-gradient(140deg,#16111f,#100d19);padding:22px;border-radius:20px;min-width:0}
+#s4premium .s4-overview h2{font-size:21px;margin:0 0 6px;letter-spacing:-.04em}
+#s4premium .s4-overview p{font-size:12px;line-height:1.65;margin:6px 0 14px}
+#s4premium .s4-funnel{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+#s4premium .s4-funnel div{border:1px solid #523b60;background:#23172f;padding:14px 9px;border-radius:12px;font-size:11px;color:#c6b8d2}
+#s4premium .s4-funnel b{display:block;color:#f0bcff;font-size:12px;margin-bottom:5px}
+#s4premium .s4-funnel-legend{font-size:10px;color:#9989a8;margin-top:13px}
+#s4premium .s4-quick{display:flex;flex-wrap:wrap;gap:9px;margin:15px 0 0}
+#s4premium .s4-quick button{border:1px solid #725187;background:#321a46;color:#f2d7ff;border-radius:10px;padding:10px 13px;cursor:pointer;font-weight:800;font-size:12px}
+#s4premium .s4-quick button:hover{background:#5b277a}
+#s4premium .s4-meter{height:10px;border-radius:8px;background:repeating-linear-gradient(90deg,#a149d0 0,#a149d0 8px,#211428 8px,#211428 12px);opacity:.75;margin:18px 0}
+#s4premium .s4-caption{font-size:10px;color:#af9bbd}
+#s4premium .s4-study{border:1px solid #5c3d65;background:linear-gradient(120deg,#171121,#1d1327);border-radius:21px;padding:25px;margin:18px 0}
+#s4premium .s4-study h2{margin:0 0 7px}
+#s4premium .s4-study-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+#s4premium .s4-study .s4-field{min-width:0}
+#s4premium .s4-study label{display:block;margin:12px 0 7px;color:#cfb9de;font-size:12px}
+#s4premium .s4-study input[type=text],#s4premium .s4-study textarea{width:100%;background:#100c18;color:#fff;border:1px solid #624775;border-radius:10px;padding:11px;font:inherit}
+#s4premium .s4-study textarea{min-height:75px;resize:vertical}
+#s4premium .s4-study button{background:#6c2eb0;color:#fff;border:1px solid #bc63d9;border-radius:10px;padding:12px 14px;cursor:pointer;font:inherit;font-weight:800}
+#s4premium .s4-study button:disabled{opacity:.4;cursor:not-allowed}
+#s4premium .s4-study-note{font-size:12px;color:#b4a2c0}
+#s4premium .s4-study-screen{display:none;border-radius:18px;border:1px solid #b34ad1;background:linear-gradient(135deg,#28103b,#090b16);min-height:245px;align-items:center;justify-content:center;flex-direction:column;padding:25px;text-align:center;margin:15px 0}
+#s4premium .s4-study-screen.show{display:flex}
+#s4premium .s4-study-screen strong{font-size:clamp(29px,4vw,51px);line-height:1.16;max-width:750px}
+#s4premium .s4-study-screen small{color:#e5a9f7;margin-bottom:12px}
+#s4premium .s4-about{border-top:1px solid #4c3659;padding:22px 7px 4px;margin-top:15px}
+#s4premium .s4-about strong{font-size:16px}
+#s4premium .s4-about p{max-width:880px;font-size:13px}
+#s4premium .s4-privacy{padding:8px 12px;background:#2a1c32;border:1px solid #785386;border-radius:8px;font-size:11px;color:#d4afd7}
+@media(max-width:950px){#s4premium .s4-overview{grid-template-columns:1fr}#s4premium .s4-funnel{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){#s4premium .s4-hero{padding:26px 19px}#s4premium .s4-funnel{grid-template-columns:repeat(2,minmax(0,1fr))}#s4premium .s4-study-grid{grid-template-columns:1fr}#s4premium .s4-study{padding:17px}#s4premium .s4-overview .s4-box{padding:17px}}
+@media(prefers-reduced-motion:reduce){#s4premium *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* BOOST-004 VISUAL QA REMEDIATION: remove legacy duplicate header and prioritize dashboard */
+body:has(#s4premium) .shell > .top{display:none!important}
+#s4premium .s4-hero{padding:28px 32px 25px}
+#s4premium .s4-hero h1{font-size:clamp(38px,4vw,56px);max-width:940px;margin:10px 0 14px}
+#s4premium .s4-hero h1:after{margin-top:14px}
+#s4premium .s4-hero p{font-size:14px;max-width:920px;line-height:1.55}
+#s4premium .s4-hero .s4-btn{margin-top:6px}
+#s4premium .s4-metrics{margin:12px 0}
+#s4premium .s4-metric{padding:13px}
+#s4premium .s4-overview{margin-top:10px}
+@media(max-width:650px){
+ #s4premium .s4-hero{padding:22px 18px}
+ #s4premium .s4-hero h1{font-size:36px}
+ #s4premium .s4-brandbar>small{display:none}
+ #s4premium .s4-brandbar{gap:10px}
+ #s4premium .s4-brandbar svg{width:40px;height:40px}
+}
