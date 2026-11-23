@@ -24,3 +24,15 @@ jobs:
         run: node tests/qa-preview.mjs
       - name: Real headless Chrome browser smoke — desktop and mobile viewport
         run: node tests/browser-preview.mjs
+      - name: Capture visual evidence (desktop + mobile viewport)
+        run: |
+          mkdir -p qa-artifacts
+          PAGE="file://$(pwd)/studio/index.html"
+          google-chrome --headless=new --no-sandbox --disable-dev-shm-usage --hide-scrollbars --window-size=1366,900 --virtual-time-budget=2500 --screenshot=qa-artifacts/desktop.png "$PAGE" >/dev/null 2>&1
+          google-chrome --headless=new --no-sandbox --disable-dev-shm-usage --hide-scrollbars --window-size=390,844 --virtual-time-budget=2500 --screenshot=qa-artifacts/mobile.png "$PAGE" >/dev/null 2>&1
+      - name: Upload QA screenshots for independent visual review
+        uses: actions/upload-artifact@v4
+        with:
+          name: premium-preview-screenshots
+          path: qa-artifacts/*.png
+          retention-days: 7
