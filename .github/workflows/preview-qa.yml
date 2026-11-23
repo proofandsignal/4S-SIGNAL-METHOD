@@ -1,0 +1,24 @@
+name: 4S Signal Studio Preview QA
+on:
+  push:
+    branches:
+      - preview/4s-prelaunch-001
+  pull_request:
+    paths:
+      - 'studio/**'
+      - 'tests/**'
+      - '.github/workflows/preview-qa.yml'
+permissions:
+  contents: read
+jobs:
+  static-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Syntax and static safety checks
+        run: node tests/qa-preview.mjs
